@@ -1,4 +1,5 @@
 import string
+import pandas as pd
 
 def conta_righe(testo):
     return len(testo.splitlines())
@@ -23,7 +24,7 @@ def parole_frequenti(testo, top=5):
 
 def main():
     try:
-        with open('input.txt', 'r', encoding='utf-8') as f:
+        with open('18 Agosto\Esercizio 1\input.txt', 'r', encoding='utf-8') as f:
             testo = f.read()
     except FileNotFoundError:
         print('Errore: file input.txt non trovato. Verifica il percorso e riprova.')
