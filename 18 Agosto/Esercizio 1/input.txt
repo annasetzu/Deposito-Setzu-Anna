@@ -1,1 +1,3 @@
-prova branch
+Questo è un file testo di prova.
+Serve per testare le funzioni di conteggio delle righe e delle parole.
+Questo file contiene parole ripetute, ad esempio: prova, testo, parole.
