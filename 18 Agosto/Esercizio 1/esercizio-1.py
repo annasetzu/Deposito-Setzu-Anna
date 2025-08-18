@@ -25,16 +25,17 @@ def main():
             testo = f.read()
     except FileNotFoundError:
         print('Errore: file input.txt non trovato. Verifica il percorso e riprova.')
+        return
         
-        print('Totale righe:', conta_righe(testo))
-        print('Totale parole:' conta_parole(testo))
-        print('Top-5 parole più frequenti:')
-        top = parole_frequenti(testo, top=5)
-        if top.empty:
-            print('(nessuna parola trovata)')
-        else:
-            for parola, cnt in top.items():
-                print(f'{parola}: {int(cnt)}')
+    print('Totale righe:', conta_righe(testo))
+    print('Totale parole:', conta_parole(testo))
+    print('Top-5 parole più frequenti:')
+    top = parole_frequenti(testo, top=5)
+    if top.empty:
+        print('(nessuna parola trovata)')
+    else:
+        for parola, cnt in top.items():
+            print(f'{parola}: {int(cnt)}')
 
 if __name__ == '__main__':
     main()
