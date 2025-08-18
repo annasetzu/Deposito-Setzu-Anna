@@ -11,3 +11,10 @@ def conta_parole(testo):
     if not nuovo_testo:
         return 0
     return len(nuovo_testo.split())
+
+def parole_frequenti(testo, top=5):
+    nuovo_testo = pulisci_testo(testo)
+    if not nuovo_testo:
+        return 0
+    serie = pd.Series(nuovo_testo.split())
+    return serie.value_counts().head(top)
